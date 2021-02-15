@@ -447,8 +447,9 @@ export function isQuarterDisabled(
 }
 
 export function isYearDisabled(year, { minDate, maxDate } = {}) {
-  const date = new Date(year, 0, 1);
-  return isOutOfBounds(date, { minDate, maxDate }) || false;
+  const startYearDate = new Date(year, 0, 1);
+  const endYearDate = new Date(year, 11, 31);
+  return (isOutOfBounds(startYearDate, { minDate, maxDate }) && isOutOfBounds(endYearDate, { minDate, maxDate })) || false;
 }
 
 export function isQuarterInRange(startDate, endDate, q, day) {
