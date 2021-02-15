@@ -41,7 +41,7 @@ export default class Year extends React.Component {
 
   onYearClick = (e, y) => {
     const { date } = this.props;
-    this.handleYearClick(utils.getStartOfYear(utils.setYear(date, y)), e);
+    this.handleYearClick(utils.getDateInYear(utils.setYear(date, y), { minDate: this.props.minDate }), e);
   };
 
   getYearClassNames = y => {

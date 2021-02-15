@@ -225,6 +225,13 @@ export function getStartOfYear(date) {
   return startOfYear(date);
 }
 
+export function getDateInYear(date, {minDate} = {}) {
+    if(isSameYear(date, minDate)) {
+        return minDate;
+    }
+    return getStartOfYear(date);
+}
+
 export function getStartOfQuarter(date) {
   return startOfQuarter(date);
 }
