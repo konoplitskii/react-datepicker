@@ -1,6 +1,6 @@
 {
   "author": "HackerOne",
-  "name": "react-datepicker",
+  "name": "@youth-design/react-datepicker-fix-disabled-years",
   "description": "A simple and reusable datepicker component for React",
   "version": "3.4.1",
   "license": "MIT",
@@ -139,5 +139,10 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
   }
 }
