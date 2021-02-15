@@ -221,6 +221,13 @@ export function getStartOfMonth(date) {
   return startOfMonth(date);
 }
 
+export function getDateInMonth(date, {minDate} = {}) {
+    if(isSameMonth(date, minDate)) {
+        return minDate;
+    }
+    return getStartOfMonth(date);
+}
+
 export function getStartOfYear(date) {
   return startOfYear(date);
 }

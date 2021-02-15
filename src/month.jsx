@@ -208,7 +208,7 @@ export default class Month extends React.Component {
 
   onMonthClick = (e, m) => {
     this.handleDayClick(
-      utils.getStartOfMonth(utils.setMonth(this.props.day, m)),
+      utils.getDateInMonth(utils.setMonth(this.props.day, m), {minDate: this.props.minDate}),
       e
     );
   };
