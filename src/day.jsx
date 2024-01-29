@@ -291,6 +291,13 @@ export default class Day extends React.Component {
       if (this.props.inline && !this.props.shouldFocusDayInline) {
         shouldFocusDay = false;
       }
+
+      //Set focus: only when the selected date is equal to the previous date or when no date is selected and the current date is the current date
+
+      if(this.props.selected  === this.props.preSelection || !this.props.selected && this.isSameDay(newDate())) {
+        shouldFocusDay = true;
+      }
+
       // the activeElement is in the container, and it is another instance of Day
       if (
         this.props.containerRef &&
